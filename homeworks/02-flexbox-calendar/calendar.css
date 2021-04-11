@@ -1,0 +1,97 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Trebuchet MS, sans-serif;
+  margin: 0;
+  padding: 14rem;
+  font-size: 0.75rem;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar {
+  width: 280px;
+  height: 286px;
+}
+
+.header {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  padding-bottom: 1.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fieldset {
+  grid-column-start: -1;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.fieldset legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.fieldset button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.day {
+  display: grid;
+  grid-template: 1fr / repeat(7, 1fr);
+  text-align: center;
+}
+
+.day li {
+  padding: 0.7rem;
+  font-weight: 700;
+}
+
+.days {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(7, 1fr);
+  text-align: center;
+  border: 1px solid #dfdfdf;
+}
+
+.days li {
+  padding: 0.7rem;
+  border: 1px solid #dfdfdf;
+}
+
+.today {
+  background-color: #3547e9;
+  color: white;
+}
+
+.previousMonth {
+  background-color: #fcfcfc;
+  color: #747474;
+}
+
+.nextMonth {
+  background-color: #fcfcfc;
+  color: #747474;
+}
