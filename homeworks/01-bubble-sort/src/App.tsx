@@ -8,8 +8,8 @@ interface Properties {
 }
 
 interface AppState {
-    state: Status
-    interval: null | ReturnType<typeof setTimeout>
+    gameState: Status
+    interval: null | ReturnType<typeof window.setTimeout>
 }
 
 class App extends React.Component<Properties, AppState> {
@@ -18,63 +18,63 @@ class App extends React.Component<Properties, AppState> {
         this.state = this.newGame()
     }
 
-    start() {
+    start(): void {
         const interval = setInterval(() => this.phase(), 50);
 
         this.setState({
-            state: this.state.state,
+            gameState: this.state.gameState,
             interval: interval,
         });
     }
 
-    stop() {
+    stop(): void {
         if (this.state.interval) {
             clearInterval(this.state.interval);
         }
 
         this.setState({
-            state: this.state.state,
+            gameState: this.state.gameState,
             interval: null
         });
     }
 
-    newGame() {
+    newGame(): AppState {
         return {
-            state: newSortingState(this.props.count, this.props.height),
+            gameState: newSortingState(this.props.count, this.props.height),
             interval: null,
         }
     }
 
-    restartGame() {
+    restartGame(): void {
         this.stop()
         this.setState(this.newGame())
     }
 
-    phase() {
-        const newGame = sortingStates(this.state.state)
+    phase(): void {
+        const newGame = sortingStates(this.state.gameState)
 
         if (gameOver(newGame)) {
             this.stop()
         }
 
         this.setState({
-            state: newGame,
+            gameState: newGame,
             interval: this.state.interval,
         })
     }
 
-    render() {
-        const status = gameOver(this.state.state)
+    render(): JSX.Element | null {
+        const status = gameOver(this.state.gameState)
             ? Sorting.Sorted
             : (this.state.interval ? Sorting.Sorting : Sorting.Stopped)
 
         return (
             this.state
                 ? <SortVisualization
-                    state={this.state.state}
+                    state={this.state.gameState}
                     status={status}
                     height={this.props.height}
-                    newGame={() => this.restartGame()}
+                    newGame={this.restartGame}
                     start={() => this.start()}
                     stop={() => this.stop()}
                 />
