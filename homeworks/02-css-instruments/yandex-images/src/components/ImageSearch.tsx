@@ -36,7 +36,7 @@ class Images extends React.Component<ImageProperties, ImageState> {
         return (
             <Div {...this.state}>
                 <I {...this.state} />
-                <Img onLoad={this.onLoad} ref={this.imageRef} src={this.props.image} alt="IMAGE HERE" />
+                <Img onLoad={this.onLoad} ref={this.imageRef} src={this.props.image} alt="PHOTO" />
             </Div>
         );
     }
@@ -46,7 +46,6 @@ const Section = styled.section`
     display: flex;
     flex-wrap: wrap;
     &::after {
-        content: '';
         flex-grow: 100000000;
     }
 `;
@@ -62,8 +61,8 @@ const ImageList: React.FunctionComponent<ListProperties> = ({images}) => {
 }
 
 const Div = styled.div<ImageState>`
-    margin: 2px;
-    background-color: violet;
+    margin: 5px;
+    background-color: white;
     position: relative;
     width: ${props => Math.floor(props.width*200/props.height)}px;
     flex-grow: ${props => Math.floor(props.width*200/props.height)}

@@ -63,7 +63,7 @@ class App extends React.Component<AppProperties, Status> {
 
     public render(): React.ReactNode {
         return (
-            <Div className="ui container">
+            <Div className="UI">
                 <ImageSearch search={this.search}/>
                 <ImageList images={this.state.images} />
             </Div>
