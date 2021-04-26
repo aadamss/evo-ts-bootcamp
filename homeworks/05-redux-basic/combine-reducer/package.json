@@ -1,0 +1,8 @@
+{
+  "name": "001-redux",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
+}
