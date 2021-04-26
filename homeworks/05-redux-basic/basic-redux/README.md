@@ -1,3 +1,9 @@
+## Application
+
+[http://aadamss-basic-redux.surge.sh/](http://aadamss-basic-redux.surge.sh/)
+
+## Homework description
+
 You should create one application using CRA. After the application is created do next steps:
 
 - [ ] to install [redux package](https://www.npmjs.com/package/redux).
