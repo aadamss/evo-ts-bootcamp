@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const minCount = 50;
-const maxCount = 100;
+const minCount = 20;
+const maxCount = 40;
 
 export type GetData = {
   id: number;
