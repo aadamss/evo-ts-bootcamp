@@ -1,0 +1,49 @@
+.marsRover {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding: 5px;
+}
+
+.links img {
+  display: none;
+  vertical-align: middle;
+}
+
+.links {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.links span:nth-child(2) img {
+  float: right;
+}
+
+.links span p {
+  margin: 10px;
+  display: inline;
+}
+
+.selected {
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+  font-weight: bold;
+}
+
+.links .selected img {
+  width: 24px;
+  line-height: 2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.unselected {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}

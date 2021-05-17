@@ -1,0 +1,59 @@
+.photoDescription {
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+}
+
+.descriptionBox {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--image-width), auto));
+  grid-gap: 10px;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.marsViewer {
+  width: 100%;
+  display: block;
+}
+
+.sols {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 1px 2px;
+}
+
+.marsPhotos {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100px;
+}
+
+.heartIcon {
+  width: 30px;
+  height: 23px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.transparency {
+  opacity: 0.3;
+}
+
+.opacity {
+  opacity: 0.7;
+}
