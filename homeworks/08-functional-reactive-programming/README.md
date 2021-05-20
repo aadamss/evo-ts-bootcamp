@@ -1,4 +1,4 @@
-# Cats Catcher by Arthur Adams
+# Car Fueler by Arthur Adams
 
 ## Starting the app
 
