@@ -1,0 +1,19 @@
+{
+  "name": "10-caesar",
+  "version": "1.0.0",
+  "description": "Caesar",
+  "scripts": {
+    "start": "ts-node src/app.ts"
+  },
+  "author": "Arthur Adams",
+  "license": "ISC",
+  "dependencies": {
+    "@types/yargs": "^16.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.1"
+  }
+}

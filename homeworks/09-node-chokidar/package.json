@@ -1,0 +1,19 @@
+{
+  "name": "09-node-chokidar",
+  "description": "To start the application, please execute the command `yarn dev`",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node src/app.ts"
+  },
+  "author": "Arthur Adams",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson-converter": "^2.0.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.1"
+  },
+  "main": "app.js"
+}
